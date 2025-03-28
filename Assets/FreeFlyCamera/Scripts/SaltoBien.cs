@@ -13,15 +13,38 @@ public class SaltoBien : MonoBehaviour
 
     private bool puedoSaltar = true;
 
+    private Animator animatorController;
+
+    private GameObject respawn;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        //transform.position = new Vector3(-5.04f,0.73f,0);
+
+        animatorController = this.GetComponent<Animator>();
+
+
+        //Respawn
+        respawn = GameObject.Find("Respawn");
+        Respawnear();
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(GameManager.estoyMuerto) return;
+
+
         //Debug.Log("Hola mi gente hermosota");
 
 
@@ -70,8 +93,10 @@ public class SaltoBien : MonoBehaviour
         */
         
         //Flipultimo método
+        //izq
         if(movTeclas > 0){
             this.GetComponent<SpriteRenderer>().flipX = false;
+        //der
         }else if(movTeclas <0 ){
            this.GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -98,6 +123,35 @@ public class SaltoBien : MonoBehaviour
             //puedoSaltar = false;
         }
 
+
+        //movimiento o quietos Animacion Walking
+        if(movTeclas !=0){
+            animatorController.SetBool("ActivarCaminar", true);
+        }else{
+            animatorController.SetBool("ActivarCaminar", false);
+        }
+
+
+
+        //comprobobar si me he salido de la pantalla por abajo
+        
+        if(transform.position.y <= -7.50f){
+            Respawnear();
+        }
+
+
+        // 0 vidas
+
+        if(GameManager.vidas <= 0)
+        {
+            GameManager.estoyMuerto = true;
+
+        }
+
+
+
+
+
     }
 
     /*
@@ -106,6 +160,19 @@ public class SaltoBien : MonoBehaviour
 
     }
     */
+
+
+    public void Respawnear(){
+
+        Debug.Log("vidas: "+GameManager.vidas);
+        GameManager.vidas = GameManager.vidas - 1;
+        Debug.Log("vidas: "+GameManager.vidas);
+
+        transform.position = respawn.transform.position;
+    }
+
+
+
 
 
 }
