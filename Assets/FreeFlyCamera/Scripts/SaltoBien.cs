@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class SaltoBien : MonoBehaviour
@@ -13,9 +14,13 @@ public class SaltoBien : MonoBehaviour
 
     private bool puedoSaltar = true;
 
+    public bool miraDerecha = true;
+
     private Animator animatorController;
 
     private GameObject respawn;
+    
+
 
 
 
@@ -92,13 +97,22 @@ public class SaltoBien : MonoBehaviour
         }
         */
         
-        //Flipultimo método
+        //Flip ultimo método
         //izq
         if(movTeclas > 0){
             this.GetComponent<SpriteRenderer>().flipX = false;
+            miraDerecha = true;
         //der
         }else if(movTeclas <0 ){
            this.GetComponent<SpriteRenderer>().flipX = true;
+           miraDerecha = false;
+        }
+
+        //movimiento o quietos Animacion Walking
+        if(movTeclas !=0){
+            animatorController.SetBool("ActivarCaminar", true);
+        }else{
+            animatorController.SetBool("ActivarCaminar", false);
         }
 
 
@@ -124,12 +138,7 @@ public class SaltoBien : MonoBehaviour
         }
 
 
-        //movimiento o quietos Animacion Walking
-        if(movTeclas !=0){
-            animatorController.SetBool("ActivarCaminar", true);
-        }else{
-            animatorController.SetBool("ActivarCaminar", false);
-        }
+
 
 
 
