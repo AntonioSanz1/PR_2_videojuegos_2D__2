@@ -12,6 +12,9 @@ public class Fuego : MonoBehaviour
     public float speedBala = 2.0f;
 
 
+    float tiempoDestrucción = 5.0f;
+
+    float queHoraEs;
 
 
     // Start is called before the first frame update
@@ -19,6 +22,9 @@ public class Fuego : MonoBehaviour
     {
         personaje = GameObject.Find("Personaje");
         bolaDerecha = personaje.GetComponent<SaltoBien>().miraDerecha;
+
+
+        queHoraEs = Time.time;
 
 
     }
@@ -31,6 +37,11 @@ public class Fuego : MonoBehaviour
         transform.Translate(speedBala* Time.deltaTime, 0, 0, Space.World);
     }else{
         transform.Translate((speedBala* Time.deltaTime)*-1, 0, 0, Space.World);
+    }
+    
+    //Debug.Log(Time.time);
+    if(Time.time >= queHoraEs+tiempoDestrucción){
+        Destroy(this.gameObject);
     }
 
 
@@ -49,6 +60,9 @@ public class Fuego : MonoBehaviour
 
         if(col.gameObject.tag == "Enemigo"){
             Destroy(col.gameObject);
+            
+            GameManager.muertes +=1;
+
             Destroy(this.gameObject);
         }
 
