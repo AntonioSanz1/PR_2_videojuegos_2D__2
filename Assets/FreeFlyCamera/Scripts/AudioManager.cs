@@ -13,10 +13,14 @@ public class AudioManager : MonoBehaviour
 
     AudioSource _audioSource;
 
+    AudioSource audioMusic;
 
     public static AudioManager Instance; 
 
 
+    public GameObject musicObj;
+
+    
 
 
     void Awake()
@@ -37,8 +41,12 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         _audioSource = this.GetComponent<AudioSource>();
+
+        
+        audioMusic = musicObj.GetComponent<AudioSource>();
         _audioSource.clip = bandaSonora;
         _audioSource.loop = true;
+        _audioSource.volume = 0.1f;
         _audioSource.Play();
     }
 
