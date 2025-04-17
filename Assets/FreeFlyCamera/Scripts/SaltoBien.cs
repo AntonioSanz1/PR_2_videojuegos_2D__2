@@ -217,5 +217,31 @@ public class SaltoBien : MonoBehaviour
     }
 
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.name == "Tunel"){
+            AudioManager.Instance.IniciarEfectoTunel();
+        }
+
+        if(col.gameObject.name == "Burbuja"){
+            AudioManager.Instance.IniciarEfectoBurbuja();
+        }
+
+
+    }
+
+
+
+    void OTriggerExit2D(Collider2D col)
+    {
+        if(col.gameObject.name == "Tunel" || col.gameObject.name == "Burbuja"){
+            AudioManager.Instance.IniciarEfectoDefault();
+        }
+
+
+        
+    }
+
+
 
 }

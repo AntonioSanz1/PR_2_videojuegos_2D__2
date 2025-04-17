@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class AudioManager : MonoBehaviour
 
     public GameObject musicObj;
 
+    public AudioMixerSnapshot defaultSnapshot;
+    public AudioMixerSnapshot tunelSnapshot;
+    public AudioMixerSnapshot submarinoSnapshot;
     
 
 
@@ -61,6 +65,20 @@ public class AudioManager : MonoBehaviour
 
         _audioSource.PlayOneShot(ac);
 
+    }
+
+
+    public void IniciarEfectoTunel(){
+        tunelSnapshot.TransitionTo(0.5f);
+    }
+
+    public void IniciarEfectoBurbuja(){
+        submarinoSnapshot.TransitionTo(1f);
+    }
+
+
+    public void IniciarEfectoDefault(){
+        defaultSnapshot.TransitionTo(0.05f);
     }
 
 
