@@ -194,10 +194,10 @@ public class SaltoBien : MonoBehaviour
 
 
     public void Respawnear(){
-
-        Debug.Log("vidas: "+GameManager.vidas);
+        AudioManager.Instance.SonarClipUnaVez(AudioManager.Instance.fxDead);
+        //Debug.Log("vidas: "+GameManager.vidas);
         GameManager.vidas = GameManager.vidas - 1;
-        Debug.Log("vidas: "+GameManager.vidas);
+        //Debug.Log("vidas: "+GameManager.vidas);
 
         transform.position = respawn.transform.position;
     }
