@@ -13,14 +13,17 @@ public class SaltoBien : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool puedoSaltar = true;
+    private bool activaSaltoFixed = false;
 
     public bool miraDerecha = true;
 
     private Animator animatorController;
 
     private GameObject respawn;
-    
 
+    float movTeclas;
+    
+    bool soyMagenta;
 
 
 
@@ -53,8 +56,8 @@ public class SaltoBien : MonoBehaviour
         //Debug.Log("Hola mi gente hermosota");
 
 
-        float movTeclas = Input.GetAxis("Horizontal"); //(a -1f - d 1f)
-        float movTeclasY = Input.GetAxis("Vertical"); //(a - 1f - d 1f)
+        movTeclas = Input.GetAxis("Horizontal"); //(a -1f - d 1f)
+        //movTeclas = Input.GetAxis("Vertical"); //(a - 1f - d 1f)
 
         //movimiento
       /*  transform.position = new Vector3(
@@ -79,7 +82,7 @@ public class SaltoBien : MonoBehaviour
 
 
         //movimiento personaje
-        rb.velocity = new Vector2(movTeclas*multiplicador, rb.velocity.y);
+        //rb.velocity = new Vector2(movTeclas*multiplicador, rb.velocity.y);
 
 
         /*
@@ -115,7 +118,7 @@ public class SaltoBien : MonoBehaviour
             animatorController.SetBool("ActivarCaminar", false);
         }
 
-
+        //SALTO
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
         Debug.DrawRay(transform.position, Vector2.down, Color.magenta);
 
@@ -130,15 +133,17 @@ public class SaltoBien : MonoBehaviour
 
         //salto
         if(Input.GetKeyDown(KeyCode.Space) && puedoSaltar){
+            activaSaltoFixed = true;
+
+            //PuedoSaltarFixed
+            /*
             rb.AddForce(
                 new Vector2(0, multiplicadorSalto),
                 ForceMode2D.Impulse
             );
+            */
             //puedoSaltar = false;
         }
-
-
-
 
 
 
@@ -171,6 +176,23 @@ public class SaltoBien : MonoBehaviour
     */
 
 
+    void FixedUpdate(){
+        
+        rb.velocity = new Vector2(movTeclas*multiplicador, rb.velocity.y);
+        
+        if(activaSaltoFixed == true){
+            rb.AddForce(
+                new Vector2(0, multiplicadorSalto),
+                ForceMode2D.Impulse
+            );
+            activaSaltoFixed = false;
+        }
+
+            
+
+    }
+
+
     public void Respawnear(){
 
         Debug.Log("vidas: "+GameManager.vidas);
@@ -180,7 +202,19 @@ public class SaltoBien : MonoBehaviour
         transform.position = respawn.transform.position;
     }
 
+    public void CambiarColor(){
 
+        if(soyMagenta){
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+            soyMagenta = false;
+        }else{
+            this.GetComponent<SpriteRenderer>().color = Color.magenta;
+            soyMagenta = true;
+        }
+
+
+
+    }
 
 
 

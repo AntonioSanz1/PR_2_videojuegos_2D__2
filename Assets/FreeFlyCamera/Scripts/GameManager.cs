@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
-    public static int vidas = 3;
+    public static int vidas = 4;
 
     public static int puntos = 0;
 
@@ -13,10 +14,13 @@ public class GameManager : MonoBehaviour
     
     public static bool estoyMuerto = false;
 
+    GameObject vidasText;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        vidasText = GameObject.Find("VidasText");
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class GameManager : MonoBehaviour
 
      Debug.Log("Puntos: "+puntos);
      Debug.Log("Muertes: "+muertes);
+     
+        vidasText.GetComponent<TextMeshProUGUI>().text = vidas.ToString();
 
     }
 }

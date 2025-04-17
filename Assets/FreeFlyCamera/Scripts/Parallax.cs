@@ -20,11 +20,19 @@ public class Parallax : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(Camera.main.transform.position);
+        /*Debug.Log(Camera.main.transform.position);
 
         transform.position = new Vector3(Camera.main.transform.position.x/parallaxSpeed, Camera.main.transform.position.y/parallaxSpeed, 0);
 
-
+        Debug.Log("Update");
+        */
 
     }
+
+    void FixedUpdate()
+    {
+         transform.position = new Vector3(Camera.main.transform.position.x/parallaxSpeed, Camera.main.transform.position.y/parallaxSpeed, 0);
+        Debug.Log("FixedUpdate");
+    }
+
 }
