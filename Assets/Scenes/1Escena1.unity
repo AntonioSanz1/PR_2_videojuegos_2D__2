@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 410091553}
   - component: {fileID: 410091552}
   - component: {fileID: 410091554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3142,7 +3142,7 @@ GameObject:
   - component: {fileID: 457637162}
   - component: {fileID: 457637165}
   - component: {fileID: 457637164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4215,7 +4215,7 @@ GameObject:
   - component: {fileID: 588954639}
   - component: {fileID: 588954641}
   - component: {fileID: 588954640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ruinas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4414,7 +4414,7 @@ GameObject:
   - component: {fileID: 602673520}
   - component: {fileID: 602673519}
   - component: {fileID: 602673518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NubesLejos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4785,6 +4785,63 @@ Transform:
   - {fileID: 1221082052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &613270113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523230512025775575, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_Name
+      value: Rock_01 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,7 +5305,7 @@ GameObject:
   - component: {fileID: 845815869}
   - component: {fileID: 845815868}
   - component: {fileID: 845815870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6441,6 +6498,63 @@ Transform:
   - {fileID: 186577626}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1390805904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.938982
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6793041
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523230512025775575, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_Name
+      value: Rock_01 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
 --- !u!1 &1398647204
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,7 +6846,7 @@ GameObject:
   - component: {fileID: 1490845429}
   - component: {fileID: 1490845428}
   - component: {fileID: 1490845430}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NubesCerca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7119,7 +7233,7 @@ GameObject:
   - component: {fileID: 1521610646}
   - component: {fileID: 1521610648}
   - component: {fileID: 1521610647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Piedras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8247,6 +8361,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9842ea1722ec74d4998e80d4c9ea4701, type: 3}
+--- !u!1001 &1648596730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740916006708440674, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523230512025775575, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_Name
+      value: Rock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203205794147642917, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65ae49242a43bbe4a8f29fe06b5cd84d, type: 3}
 --- !u!1001 &1689234616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8469,7 +8644,7 @@ GameObject:
   - component: {fileID: 1958499405}
   - component: {fileID: 1958499407}
   - component: {fileID: 1958499406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Monta\xF1as"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9213,7 +9388,7 @@ GameObject:
   - component: {fileID: 2040903653}
   - component: {fileID: 2040903654}
   - component: {fileID: 2040903655}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Personaje
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9784,3 +9959,6 @@ SceneRoots:
   - {fileID: 58261202}
   - {fileID: 500487996}
   - {fileID: 604964773}
+  - {fileID: 1648596730}
+  - {fileID: 613270113}
+  - {fileID: 1390805904}
