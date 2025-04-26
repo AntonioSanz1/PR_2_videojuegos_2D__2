@@ -21,8 +21,6 @@ public class TrampaRoca : MonoBehaviour
     
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -51,20 +49,22 @@ public class TrampaRoca : MonoBehaviour
             rBdy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
 
-        //Hacer que el objeto vuelva a subir 
-        if(estaSubiendo){
-            transform.Translate(Time.deltaTime * velocidadSubida * Vector3.up);
+        //Hacer que el objeto vuelva a subir hasta su posición inicial
+     if (estaSubiendo)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, posicionInicial, velocidadSubida * Time.deltaTime);
+
+            // Cuando llega a la posición inicial
+            if (transform.position == posicionInicial)
+            {
+                estaSubiendo = false;
+                rBdy.constraints = RigidbodyConstraints2D.FreezeAll; // Congelarlo al llegar
+            }
         }
-
-
-    // Si la roca no está subiendo y no ha llegado a su posición inicial
-    if (!estaSubiendo && transform.position != posicionInicial)
-    {
-        // Moverla gradualmente hacia su posición inicial
-        transform.position = Vector3.MoveTowards(transform.position, posicionInicial, velocidadSubida * Time.deltaTime);
     }
 
-    }
+
+
 
     //Detectar impacto en Suelo y que pueda volver a subir gracias al bool
      private void OnCollisionEnter2D(Collision2D other)
@@ -85,10 +85,8 @@ public class TrampaRoca : MonoBehaviour
             }
 
         }
-        
-       
-
     } 
+
 
         void OnTriggerEnter2D(Collider2D col){
 

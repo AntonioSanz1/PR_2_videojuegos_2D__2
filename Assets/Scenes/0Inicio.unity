@@ -1055,7 +1055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -459, y: -201}
+  m_AnchoredPosition: {x: -401, y: -202}
   m_SizeDelta: {x: 550, y: 174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401507595
@@ -1321,6 +1321,10 @@ MonoBehaviour:
   fxCoin: {fileID: 8300000, guid: 4869bb0a3731399439051990892d704c, type: 3}
   fxDead: {fileID: 8300000, guid: ade204554dd6b9b419d2db3d4c78f5a6, type: 3}
   fxFire: {fileID: 8300000, guid: bd7492fe31bbc004e896a56f70767a33, type: 3}
+  musicObj: {fileID: 0}
+  defaultSnapshot: {fileID: 0}
+  tunelSnapshot: {fileID: 0}
+  submarinoSnapshot: {fileID: 0}
 --- !u!4 &1440356783
 Transform:
   m_ObjectHideFlags: 0
